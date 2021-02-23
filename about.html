@@ -8,33 +8,33 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
         <!-- optional meta tags -->
-        <meta name="description" content="index">
+        <meta name="description" content="about">
         <meta name="author" content="Charles Liu">
         <!-- title of page -->
-        <title>Home</title>
+        <title>About</title>
         <!-- make this the canonical page for Google to crawl -->
-        <link rel="canonical" href="https://cliu222.github.io/templates/index.html">
+        <link rel="canonical" href="https://cliu222.github.io/about.html">
         <!-- loads Bootstrap core CSS and links it -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
         <!-- * favicons (iOS, browser) -->
-        <link rel="apple-touch-icon" href="../static/apple-touch-icon.png" sizes="180x180">
-        <link rel="icon" href="../static/favicon-16x16.png" sizes="16x16" type="image/png">
-        <link rel="icon" href="../static/favicon-32x32.png" sizes="32x32" type="image/png">
+        <link rel="apple-touch-icon" href="./static/apple-touch-icon.png" sizes="180x180">
+        <link rel="icon" href="./static/favicon-16x16.png" sizes="16x16" type="image/png">
+        <link rel="icon" href="./static/favicon-32x32.png" sizes="32x32" type="image/png">
         <!-- * video background -->
         <div class="overlay">
             <video class ="bg-video" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-                <source src="../media/Lights-5201.mp4" type="video/mp4">
+                <source src="./media/Lights-5201.mp4" type="video/mp4">
             </video>
         </div>
         <!-- * manifest for PWA Add to Home -->
         <!-- OPTIONAL FOR INSIDE MANIFEST - has to do with campaign data "start_url": "/?utm_source=a2hs", -->
-        <link rel="manifest" href="../manifest.json">
+        <link rel="manifest" href="./config/manifest.json">
         <!-- * SVG file for Safari pinned tabs -->
-        <link rel="mask-icon" href="../static/favicon.svg" color="#58d68d">
+        <link rel="mask-icon" href="./static/favicon.svg" color="#58d68d">
         <!-- * ICO file for older browsers + <=IE9 -->
-        <link rel="icon" href="../static/favicon.ico">
+        <link rel="icon" href="./static/favicon.ico">
         <!-- * Windows tile config -->
-        <meta name="msapplication-config" content="../browserconfig.xml">
+        <meta name="msapplication-config" content="./config/browserconfig.xml">
         <!-- suggested color user agents should use to customize display of page / surrounding UI -->
         <meta name="theme-color" content="#58d68d">
 
@@ -57,7 +57,7 @@
         </style>
 
         <!-- * link personal stylesheet -->
-        <link href="../static/styles.css" rel="stylesheet">
+        <link href="./static/styles.css" rel="stylesheet">
         <!-- enables jquery and Bootstrap Bundle (includes Popper) -->
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
@@ -72,23 +72,18 @@
             <header class="masthead mb-auto">
                 <div class="inner">
                     <nav class="nav nav-masthead justify-content-center">
-                        <a class="nav-link active" href="#">Home</a>
-                        <a class="nav-link" href="./about.html">About</a>
+                        <a class="nav-link" href="./index.html">Home</a>
+                        <a class="nav-link active" href="#">About</a>
                         <a class="nav-link" href="./interesting_stuff.html">Interesting Stuff</a>
                     </nav>
                 </div>
             </header>
             <!-- * main content in center of page -->
             <main role="main" class="inner cover">
-                <h1 class="cover-heading">Charles Liu</h1>
-                <p class="lead">
-                    I-Banking @ Goldman -> Investing @ Balyasny -> SWE @ ???
-                    </br>
-                    NYC-based | CS + Econ @ Rutgers '17
-                </p>
-                <p class="lead">
-                    <a href="./about.html" class="btn btn-lg btn-secondary">About Me</a>
-                </p>
+                <h1 class="cover-heading">My Resume</h1>
+                <div class="embed-responsive embedded-doc iframe-wrapper-ios">
+                    <iframe class="embed-responsive-item" src="https://drive.google.com/viewerng/viewer?embedded=true&url=https://cliu222.github.io/media/Charles_Liu_Resume_vF.pdf"></iframe>
+                </div>
             </main>
             <!-- footer content at bottom -->
             <footer class="mastfoot mt-auto">
