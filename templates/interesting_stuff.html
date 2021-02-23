@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <!-- required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
+        <!-- optional meta tags -->
+        <meta name="description" content="interesting_stuff">
+        <meta name="author" content="Charles Liu">
+        <!-- title of page -->
+        <title>Interesting Stuff</title>
+        <!-- make this the canonical page for Google to crawl -->
+        <link rel="canonical" href="https://cliu222.github.io/templates/interesting_stuff.html">
+        <!-- loads Bootstrap core CSS and links it -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+        <!-- JS for this page -->
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                document.querySelector("#survey_response").addEventListener("submit", function(event) {
+
+                    event.preventDefault();
+                    var survey_reaction = document.querySelector("#survey_reaction");
+                    var response = document.querySelector("#answer").value.trim().toLowerCase();
+                        if(/^[y]+/.test(response)==true)
+                        {
+                            survey_reaction.innerHTML = "Great! Thanks";
+                            document.querySelector("#answer").disabled = true;
+                        }
+                        else if (/^[n]+/.test(response)==true)
+                        {
+                            survey_reaction.innerHTML = ":( Got it. We'll keep working on it! Check in again soon";
+                            document.querySelector("#answer").disabled = true;
+                        }
+                        else
+                        {
+                            survey_reaction.innerHTML = "What?";
+                        }
+                });
+            });
+        </script>
+
+        <!-- * favicons (iOS, browser) -->
+        <link rel="apple-touch-icon" href="../static/apple-touch-icon.png" sizes="180x180">
+        <link rel="icon" href="../static/favicon-16x16.png" sizes="16x16" type="image/png">
+        <link rel="icon" href="../static/favicon-32x32.png" sizes="32x32" type="image/png">
+        <!-- * video background -->
+        <div class="overlay">
+            <video class ="bg-video" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+                <source src="../media/Lights-5201.mp4" type="video/mp4">
+            </video>
+        </div>
+        <!-- * manifest for PWA Add to Home -->
+        <!-- OPTIONAL FOR INSIDE MANIFEST - has to do with campaign data "start_url": "/?utm_source=a2hs", -->
+        <link rel="manifest" href="../manifest.json">
+        <!-- * SVG file for Safari pinned tabs -->
+        <link rel="mask-icon" href="../static/favicon.svg" color="#58d68d">
+        <!-- * ICO file for older browsers + <=IE9 -->
+        <link rel="icon" href="../static/favicon.ico">
+        <!-- * Windows tile config -->
+        <meta name="msapplication-config" content="../browserconfig.xml">
+        <!-- suggested color user agents should use to customize display of page / surrounding UI -->
+        <meta name="theme-color" content="#58d68d">
+
+        <!-- defining styles for bd-placeholder-img class. This is distinct from the styles.css file, which is global to the site and not just this page -->
+        <style>
+            .bd-placeholder-img {
+                font-size: 1.125rem;
+                text-anchor: middle;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+
+            @media (min-width: 768px) {
+                .bd-placeholder-img-lg {
+                    font-size: 3.5rem;
+                }
+            }
+        </style>
+
+        <!-- * link personal stylesheet -->
+        <link href="../static/styles.css" rel="stylesheet">
+        <!-- enables jquery and Bootstrap Bundle (includes Popper) -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+    </head>
+
+    <body class="text-center">
+
+        <!-- Flexbox containing the contents of the page itself -->
+        <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+            <!-- * top row of content -->
+            <header class="masthead mb-auto">
+                <div class="inner">
+                    <nav class="nav nav-masthead justify-content-center">
+                        <a class="nav-link" href="./index.html">Home</a>
+                        <a class="nav-link" href="./about.html">About</a>
+                        <a class="nav-link active" href="#">Interesting Stuff</a>
+                    </nav>
+                </div>
+            </header>
+            <!-- main content in center of page -->
+            <main role="main" class="inner cover">
+                    <div class="embedded-video">
+                        <h1 class="cover-heading">The first YouTube video ever.</h1>
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe width="1705" height="968" src="https://www.youtube.com/embed/jNQXAC9IVRw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="survey">
+                        <h1 class="cover-heading">Random question</h1>
+                        <p class="lead">
+                            Do you like this site?
+                        </p>
+                        <form id="survey_response">
+                            <input id="answer" type="text" autocomplete="off" placeholder="Your answer here">
+                            <input type="submit">
+                        </form>
+                        <h4 id="survey_reaction" class="cover-heading"><!-- placeholder for response based on survey answer --></h4>
+                    </div>
+            </main>
+            <!-- footer content at bottom -->
+            <footer class="mastfoot mt-auto">
+                <div class="inner">
+                    <p>
+                        Made using
+                        <a href="https://getbootstrap.com/">Bootstrap</a>
+                        , by
+                        <a href="https://twitter.com/mdo">@mdo</a>
+                        .
+                    </p>
+                </div>
+            </footer>
+        </div>
+
+    </body>
+
+</html>
