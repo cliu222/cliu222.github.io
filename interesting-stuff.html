@@ -23,21 +23,21 @@
                 document.querySelector("#survey-response").addEventListener("submit", function(event) {
 
                     event.preventDefault();
-                    var survey-reaction = document.querySelector("#survey-reaction");
+                    var survey_reaction = document.querySelector("#survey-reaction");
                     var response = document.querySelector("#answer").value.trim().toLowerCase();
                         if(/^[y]+/.test(response)==true)
                         {
-                            survey-reaction.innerHTML = "Great! Thanks";
+                            survey_reaction.innerHTML = "Great! Thanks";
                             document.querySelector("#answer").disabled = true;
                         }
                         else if (/^[n]+/.test(response)==true)
                         {
-                            survey-reaction.innerHTML = ":( Got it. We'll keep working on it! Check in again soon";
+                            survey_reaction.innerHTML = ":( Got it. We'll keep working on it! Check in again soon";
                             document.querySelector("#answer").disabled = true;
                         }
                         else
                         {
-                            survey-reaction.innerHTML = "What?";
+                            survey_reaction.innerHTML = "What?";
                         }
                 });
             });
